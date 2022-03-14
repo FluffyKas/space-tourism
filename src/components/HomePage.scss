@@ -1,0 +1,18 @@
+.home-page-wrapper {
+  min-height: 100vh;
+  background: url(../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media(min-width: 29rem) {
+    background: url(../assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media(min-width: 60rem) {
+    background: url(../assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

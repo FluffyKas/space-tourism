@@ -1,0 +1,39 @@
+@use '../global-styles/variables.scss' as *;
+
+header {
+  color: white;
+  font-family: $ff-barlow;
+  position: absolute;
+  width: 100%;
+}
+
+.header-wrapper {
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media(min-width: 30rem) {
+    max-width: 1500px;
+    padding-inline: 0;
+  }
+}
+
+.nav-menu {
+  display: none;
+  @media(min-width: 30rem) {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 2rem;
+  }
+  
+}
+
+.hamburger-btn {
+  background: transparent;
+  border: 0;
+  @media(min-width: 30rem) {
+    display: none;
+  }
+}
