@@ -1,5 +1,7 @@
 @use '../global-styles/variables.scss' as *;
 
+// GENERAL STYLES
+
 header {
   color: white;
   font-family: $ff-barlow;
@@ -13,28 +15,74 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media(min-width: 30rem) {
-    max-width: 1500px;
-    padding-inline: 0;
+  @media(min-width: 40rem) {
+    max-width: 1300px;
+    padding-right: 1.5rem;
   }
 }
 
+.logo {
+  @media(min-width: 60rem) {
+    padding-top: 1rem;
+  }
+}
+
+// NAV MENU
+
 .nav-menu {
   display: none;
-  @media(min-width: 30rem) {
+  @media(min-width: 40rem) {
+    background: hsla(0, 0%, 59%, 0.1);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
     display: flex;
-    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     gap: 2rem;
+    padding: 2rem 5rem;
+    position: absolute;
+    right: 0;
+    max-width: 60%;
+    top: 0;
   }
-  
+
+  @media(min-width: 60rem) {
+    background: hsla(0, 0%, 59%, 0.1);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 6rem;
+    padding: 2rem 5rem;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    top: 2rem;
+  }
 }
+
+.menu-item {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.menu-item-number {
+  display: none;
+  @media(min-width: 80rem) {
+    display: inline-block;
+    font-weight: 500;
+    padding-right: 1rem;
+  }
+}
+
+// HAMBURGER
 
 .hamburger-btn {
   background: transparent;
   border: 0;
   cursor: pointer;
-  @media(min-width: 30rem) {
+  @media(min-width: 40rem) {
     display: none;
   }
 }
