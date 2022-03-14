@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap');
+
+// Colors
+
+$clr-white: hsl(0, 0%, 100%);
+$clr-pastel-blue: hsl(231, 77%, 90%);
+$clr-dark-blue: hsl(230, 35%, 7%);
 
 // Fonts
 
 $ff-barlow: 'Barlow Condensed', sans-serif;
+$ff-bellefair: 'Bellefair', serif;
