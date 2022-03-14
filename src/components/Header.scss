@@ -33,6 +33,7 @@ header {
 .hamburger-btn {
   background: transparent;
   border: 0;
+  cursor: pointer;
   @media(min-width: 30rem) {
     display: none;
   }
