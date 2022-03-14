@@ -59,12 +59,47 @@ header {
     right: 0;
     width: 60%;
     top: 2rem;
+
+    &::before {
+      content: '';
+      border: 0;
+      border-top: 1px solid $clr-white;
+      opacity: 0.2;
+      width: 20rem;
+      background: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateX(calc(-100% + 1rem)) translateY(-50%);
+    }
   }
 }
 
 .menu-item {
+  cursor: pointer;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 300;
+  position: relative;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3.4rem;
+  background: $clr-white;
+  width: 0;
+  height: 3px;
+  transition: all .3s ease-in;
+}
+
+.menu-item:hover {
+  color: $clr-white;
+}
+
+.menu-item:hover::before {
+  width: 100%;
 }
 
 .menu-item-number {
