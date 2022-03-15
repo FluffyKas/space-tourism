@@ -1,25 +1,32 @@
+import json from '../assets/data.json';
+import './Technology.scss';
+
 const Technology = () => {
 
-  const data = require('../assets/data.json');
-  const techData = data.technology;
-  console.log(techData[1].images)
+  const techData = json.technology;
+
+  const changeContent = () => {
+    console.log('clicked')
+  }
 
   return (
-    <div>
+    <div className="technology-container">
 
-      <h1>03 Space launch 101</h1>
+      <div className="inner-container">
+        <h1 className="page-title"><span className="page-title-number">03</span> Space launch 101</h1>
 
-      <picture>
-        <img src={techData[1].images.portrait} alt="Pls mr image work." />
-      </picture>
 
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
+        <li className="btn-container">
+          {techData.map((techOption, index) => {
+            return <button key={index} className="tech-page-btn" onClick={changeContent}>{index + 1}</button>
+          })
+          }
+        </li>
 
-      <h2>The terminology...</h2>
-      <h3>{techData.name}</h3>
-      <p>{techData.description}</p>
+        <h2 className="const-subtitle">The terminology...</h2>
+        <h3 className="dynamic-subtitle">{techData[1].name}</h3>
+        <p className="page-description">{techData[1].description}</p>
+      </div>
 
     </div>
   );
