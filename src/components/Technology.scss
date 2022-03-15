@@ -1,0 +1,76 @@
+@use '../global-styles/variables.scss' as *;
+
+.technology-container {
+  background: url('../assets/technology/background-technology-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $clr-white;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 3rem;
+
+  @media(min-width: 29rem) {
+    background: url('../assets/technology/background-technology-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media(min-width: 60rem) {
+    background: url('../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.inner-container {
+  text-align: center;
+}
+
+.page-title {
+  font-family: $ff-barlow;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.page-title-number {
+  font-weight: 500;
+  opacity: .25;
+  padding-right: .75rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tech-page-btn {
+  all: unset;
+  border: 1px solid $clr-white;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  text-align: center;
+}
+
+.const-subtitle {
+  font-family: $ff-barlow;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.dynamic-subtitle {
+  font-family: $ff-bellefair;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.page-description {
+  font-family: $ff-barlow;
+  font-size: 0.9375rem;
+}
