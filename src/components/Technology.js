@@ -2,7 +2,7 @@ const Technology = () => {
 
   const data = require('../assets/data.json');
   const techData = data.technology;
-
+  console.log(techData[1].images)
 
   return (
     <div>
@@ -10,7 +10,7 @@ const Technology = () => {
       <h1>03 Space launch 101</h1>
 
       <picture>
-        <img src="" alt="" />
+        <img src={techData[1].images.portrait} alt="Pls mr image work." />
       </picture>
 
       <button>1</button>
