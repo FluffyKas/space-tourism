@@ -1,0 +1,28 @@
+@use '../global-styles/variables.scss' as *;
+
+.destination-container {
+  background: url('../assets/destination/background-destination-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $clr-white;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 3rem;
+
+  @media(min-width: 29rem) {
+    background: url('../assets/destination/background-destination-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media(min-width: 60rem) {
+    background: url('../assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.inner-container {
+  text-align: center;
+}

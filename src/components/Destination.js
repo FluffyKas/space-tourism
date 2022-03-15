@@ -1,6 +1,12 @@
+import './Destination.scss';
+
 const Destination = () => {
   return (
-    <p>Destination!</p>
+    <div className="destination-container">
+      <div className="inner-container">
+        cica
+      </div>
+    </div>
   );
 }
 
