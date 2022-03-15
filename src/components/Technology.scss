@@ -1,7 +1,7 @@
 @use '../global-styles/variables.scss' as *;
 
 .technology-container {
-  background: url('../assets/technology/background-technology-mobile.jpg');
+  background: url('../../public/images/technology/background-technology-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: $clr-white;
@@ -11,13 +11,13 @@
   padding-top: 3rem;
 
   @media(min-width: 29rem) {
-    background: url('../assets/technology/background-technology-tablet.jpg');
+    background: url('../../public/images/technology/background-technology-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../assets/technology/background-technology-desktop.jpg');
+    background: url('../../public/images/technology/background-technology-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -28,11 +28,12 @@
 }
 
 .page-title {
-  font-family: $ff-barlow;
+  font-family: $ff-barlow-condensed;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+  padding-bottom: 2rem;
 }
 
 .page-title-number {
@@ -41,10 +42,14 @@
   padding-right: .75rem;
 }
 
+.technology-illustration {
+}
+
 .btn-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  padding-block: 2rem;
 }
 
 .tech-page-btn {
@@ -58,19 +63,26 @@
 }
 
 .const-subtitle {
-  font-family: $ff-barlow;
+  color: $clr-pastel-blue;
+  font-family: $ff-barlow-condensed;
   font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 400;
+  letter-spacing: 3px;
 }
 
 .dynamic-subtitle {
   font-family: $ff-bellefair;
   font-size: 1.5rem;
   text-transform: uppercase;
+  padding-block: 0.5rem 1rem;
 }
 
 .page-description {
   font-family: $ff-barlow;
+  font-weight: 300;
   font-size: 0.9375rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  line-height: 1.75;
 }

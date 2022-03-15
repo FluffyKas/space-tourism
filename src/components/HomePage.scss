@@ -2,8 +2,6 @@
 
 // GENERAL STYLES
 
-
-
 .home-outer-wrapper {
   min-height: 100vh;
   background: url(../assets/home/background-home-mobile.jpg);
@@ -49,7 +47,7 @@
 .home__title {
   color: $clr-pastel-blue;
   font-size: clamp(1rem, 2.5vw, 1.75rem);
-  font-family: $ff-barlow;
+  font-family: $ff-barlow-condensed;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
