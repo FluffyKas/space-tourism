@@ -25,6 +25,27 @@
 
 .inner-container {
   text-align: center;
+
+  @media(min-width:60rem) {
+    display: flex;
+    text-align: left;
+  }
+}
+
+.tech-text {
+  @media(min-width:60rem) {
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+}
+
+picture { 
+  @media(min-width:60rem) {
+  order: 2;
+}
 }
 
 .page-title {
@@ -42,14 +63,14 @@
   padding-right: .75rem;
 }
 
-.technology-illustration {
-}
-
 .btn-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
   padding-block: 2rem;
+  @media(min-width:60rem) {
+    flex-direction: column;
+  }
 }
 
 .tech-page-btn {
