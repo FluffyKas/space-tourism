@@ -4,11 +4,6 @@
   background: url('../../public/images/destination/background-destination-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: $clr-white;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding-top: 3rem;
 
   @media(min-width: 29rem) {
     background: url('../../public/images/destination/background-destination-tablet.jpg');
@@ -25,4 +20,44 @@
 
 .inner-container {
   text-align: center;
+}
+
+.destination-img {
+  padding-inline: 6rem;
+}
+
+.destination-page-btn {
+  all: unset;
+  color: $clr-pastel-blue;
+  font-family: $ff-barlow-condensed;
+  text-transform: uppercase;
+}
+
+.destination-name {
+  font-size: clamp(3.5rem,10vw,6.25rem);
+  font-weight: 400;
+}
+
+.destination-details {
+  position: relative;
+}
+
+.destination-details::before {
+  content: '';
+      border: 0;
+      border-top: 1px solid $clr-white;
+      opacity: 0.2;
+      width: 80%;
+      background: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+}
+
+.detail-title {
+  font-size: 0.875rem;
+}
+
+.detail-data {
+  font-size: 1.75rem;
 }
