@@ -16,12 +16,13 @@ header {
   align-items: center;
   justify-content: space-between;
   @media(min-width: 40rem) {
-    max-width: 1300px;
+    max-width: 1400px;
     padding-right: 1.5rem;
   }
 }
 
 .logo {
+  width: clamp(2.25rem, 4vw, 3rem);
   @media(min-width: 60rem) {
     padding-top: 1rem;
   }
