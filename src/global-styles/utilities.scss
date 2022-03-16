@@ -1,0 +1,125 @@
+@use './variables.scss' as *;
+
+.white {
+  color: $clr-white;
+}
+
+.pastel-blue {
+  color: $clr-pastel-blue;
+}
+
+.ff-barlow {
+  font-family: $ff-barlow;
+}
+
+.ff-barlow-cond {
+  font-family: $ff-barlow-condensed;
+  letter-spacing: 1.5px;
+}
+
+.ff-bellefair {
+  font-family: $ff-bellefair;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+
+//Paddings
+
+.pt-050 {
+  padding-top: .5rem;
+}
+
+.pt-100 {
+  padding-top: 1rem;
+}
+
+.pt-150 {
+  padding-top: 1.5rem;
+}
+
+.pt-200 {
+  padding-top: 2rem;
+}
+
+.pb-050 {
+  padding-bottom: .5rem;
+}
+
+.pb-100 {
+  padding-bottom: 1rem;
+}
+
+.pb-150 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-200 {
+  padding-bottom: 2rem;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding-top: clamp(5.5rem, 23vw, 15rem);
+}
+
+.page-title {
+  font-family: $ff-barlow-condensed;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.page-title-number {
+  font-weight: 500;
+  opacity: .25;
+  padding-right: .75rem;
+}
+
+.page-description {
+  font-family: $ff-barlow;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  line-height: 1.75;
+  color: $clr-pastel-blue;
+  padding-bottom: 1rem;
+}
