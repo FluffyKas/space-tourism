@@ -101,7 +101,7 @@
   min-height: 100vh;
   display: grid;
   justify-content: center;
-  padding-top: clamp(5.5rem, 23vw, 15rem);
+  padding-top: clamp(5.5rem, 23vw, 13rem);
   text-align: center;
   @media(min-width: 30rem) {
     text-align: left;
@@ -119,6 +119,9 @@
     padding-left: 2rem;
     padding-bottom: 4rem;
     }
+  @media(min-width: 60rem) {
+    padding-bottom: 0;
+  }
 }
 
 .page-title-number {
