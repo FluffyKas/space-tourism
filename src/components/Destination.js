@@ -8,7 +8,7 @@ const Destination = () => {
   const destinationData = json.destinations;
 
   const switchDestination = () => {
-    alert('clicked');
+    console.log('clicked');
   }
 
   return (
@@ -21,7 +21,7 @@ const Destination = () => {
         <motion.picture
           className="destination-img"
           animate={{ rotate: "360deg" }}
-          transition={{ repeat: "Infinity", duration: 150 }}
+          transition={{ repeat: "Infinity", duration: 110 }}
         >
           <source media="(min-width:30rem)" srcSet={destinationData[0].images.png} />
           <img src={destinationData[0].images.webp} alt="" />
