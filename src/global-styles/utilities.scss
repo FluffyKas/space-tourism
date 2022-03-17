@@ -118,7 +118,7 @@
   @media(min-width: 30rem) {
     padding-left: 2rem;
     padding-bottom: 4rem;
-  }
+    }
 }
 
 .page-title-number {
@@ -137,4 +137,7 @@
   color: $clr-pastel-blue;
   padding-bottom: 1rem;
   padding-inline: 2rem;
+  @media(min-width:60rem) {
+    padding-inline: 0;
+  }
 }

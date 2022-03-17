@@ -21,7 +21,7 @@ const Destination = () => {
         <div className="destination-text">
           <li className="destination-btn-container">
             {destinationData.map((destinationOption, index) => {
-              return <button key={index} className="destination-page-btn">{destinationOption.name}</button>
+              return <button key={index} className="destination-page-btn uppercase ff-barlow-cond pastel-blue">{destinationOption.name}</button>
             })
             }
           </li>

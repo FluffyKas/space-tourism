@@ -23,14 +23,60 @@
   padding-bottom: 2rem;
   @media(min-width: 60rem) {
     padding-inline: 0;
+    order: 1;
+  }
+}
+
+.inner-container {
+
+  @media(min-width:60rem) {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    gap: 12rem;
+    align-items: center;
+    padding-inline: 2rem;
+  }
+}
+
+.destination-text {
+  @media(min-width: 60rem) {
+    order: 2;
+  }
+}
+
+.destination-btn-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  @media(min-width: 60rem) {
+    justify-content: flex-start;
+    gap: 2.5rem;
   }
 }
 
 .destination-page-btn {
-  all: unset;
-  color: $clr-pastel-blue;
-  font-family: $ff-barlow-condensed;
-  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  &:hover {
+    color: white;
+  }
+}
+
+.destination-page-btn.active::before {
+  color: white;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+  background: $clr-white;
+  width: 100%;
+  height: 3px;
+  transition: all .3s ease-in;
 }
 
 .destination-name {
@@ -41,23 +87,31 @@
   position: relative;
   @media(min-width: 30rem) {
     display: flex;
-    aling-items: center;
     justify-content: space-evenly;
     gap: 2rem;
     padding-top: 1.5rem;
   }
+  @media(min-width:60rem) {
+    justify-content: flex-start;
+    gap: 4rem;
+}
 }
 
 .destination-details::before {
   content: '';
-      border: 0;
-      border-top: 1px solid $clr-white;
-      opacity: 0.2;
-      width: 80%;
-      background: 0;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+  border: 0;
+  border-top: 1px solid $clr-white;
+  opacity: 0.2;
+  width: 80%;
+  background: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  @media(min-width:60rem) {
+    left: 0;
+    transform: none;
+    width: 100%;
+}
 }
 
 .detail:first-child {
@@ -77,36 +131,4 @@
 
 .detail-data {
   font-size: 1.75rem;
-}
-
-.inner-container {
-
-  @media(min-width:60rem) {
-    display: flex;
-    text-align: left;
-    justify-content: space-between;
-    gap: 5rem;
-    align-items: center;
-  }
-}
-
-picture { 
-  @media(min-width:60rem) {
-  order: 1;
-}
-}
-
-.destination-text {
-  @media(min-width: 60rem) {
-    order: 2;
-  }
-}
-
-.destination-btn-container {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  @media(min-width: 60rem) {
-    justify-content: flex-start;
-  }
 }
