@@ -66,12 +66,12 @@ header {
       border: 0;
       border-top: 1px solid $clr-white;
       opacity: 0.2;
-      width: 20rem;
+      width: clamp(18rem, 28vw, 25rem);
       background: 0;
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translateX(calc(-100% + 1rem)) translateY(-50%);
+      transform: translateX(calc(-100% + 1.5rem)) translateY(-50%);
     }
   }
 }

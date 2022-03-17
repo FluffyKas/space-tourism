@@ -48,21 +48,6 @@ picture {
 }
 }
 
-.page-title {
-  font-family: $ff-barlow-condensed;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  padding-bottom: 2rem;
-}
-
-.page-title-number {
-  font-weight: 500;
-  opacity: .25;
-  padding-right: .75rem;
-}
-
 .btn-container {
   display: flex;
   gap: 1rem;
@@ -97,13 +82,4 @@ picture {
   font-size: 1.5rem;
   text-transform: uppercase;
   padding-block: 0.5rem 1rem;
-}
-
-.page-description {
-  font-family: $ff-barlow;
-  font-weight: 300;
-  font-size: 0.9375rem;
-  max-width: 20rem;
-  margin: 0 auto;
-  line-height: 1.75;
 }
