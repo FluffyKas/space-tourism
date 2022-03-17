@@ -20,6 +20,7 @@
 
 .destination-img {
   padding-inline: 6rem;
+  padding-bottom: 2rem;
   @media(min-width: 60rem) {
     padding-inline: 0;
   }
@@ -34,16 +35,16 @@
 
 .destination-name {
   font-size: clamp(3.5rem,10vw,6.25rem);
-  font-weight: 400;
 }
 
 .destination-details {
   position: relative;
-  @media(min-width: 60rem) {
+  @media(min-width: 30rem) {
     display: flex;
     aling-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -58,6 +59,17 @@
       left: 50%;
       transform: translateX(-50%);
 }
+
+.detail:first-child {
+  padding-top: 2rem;
+}
+
+.detail:last-child {
+  @media(min-width:30rem) {
+    padding-top: 2rem;
+  }
+}
+
 
 .detail-title {
   font-size: 0.875rem;

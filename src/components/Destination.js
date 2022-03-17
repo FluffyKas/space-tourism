@@ -13,9 +13,9 @@ const Destination = () => {
 
       <div className="inner-container">
 
-        <picture>
+        <picture className="destination-img">
           <source media="(min-width:30rem)" srcSet={destinationData[0].images.png} />
-          <img src={destinationData[0].images.webp} alt="" className="destination-img" />
+          <img src={destinationData[0].images.webp} alt="" />
         </picture>
 
         <div className="destination-text">
@@ -27,7 +27,7 @@ const Destination = () => {
           </li>
 
           <div>
-            <h2 className="destination-name ff-bellefair uppercase">{destinationData[0].name}</h2>
+            <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{destinationData[0].name}</h2>
             <p className="page-description">{destinationData[0].description}</p>
 
             <div className="destination-details pb-200">
