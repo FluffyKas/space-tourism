@@ -45,24 +45,17 @@
 // TITLE
 
 .home__title {
-  color: $clr-pastel-blue;
   font-size: clamp(1rem, 2.5vw, 1.75rem);
-  font-family: $ff-barlow-condensed;
   font-weight: 400;
   letter-spacing: 3px;
-  text-transform: uppercase;
 }
 
 .home__title-highlight {
-  color: $clr-white;
   display: block;
-  font-family: $ff-bellefair;
   font-size: clamp(5rem, 20vw, 9.375rem);
 }
 
 .home__text {
-  color: $clr-pastel-blue;
-  font-family: $ff-barlow;
   font-size: clamp(0.9375rem, 2.75vw, 1.125rem);
   font-weight: 400;
   letter-spacing: 1px;
@@ -78,11 +71,9 @@
   border: 0;
   border-radius: 50%;
   cursor: pointer;
-  font-family: $ff-bellefair;
   letter-spacing: 2px;
   font-size: clamp(1.25rem, 4vw, 2rem);
   width: clamp(9.375rem, 32vw, 17.125rem);
   aspect-ratio: 1;
   margin-top: 4.5rem;
-  text-transform: uppercase;
 }
