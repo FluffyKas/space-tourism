@@ -1,10 +1,15 @@
 import json from '../assets/data.json';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
+import { motion } from 'framer-motion';
 
 const Destination = () => {
 
   const destinationData = json.destinations;
+
+  const switchDestination = () => {
+    alert('clicked');
+  }
 
   return (
     <div className="destination-container container white">
@@ -13,15 +18,25 @@ const Destination = () => {
 
       <div className="inner-container">
 
-        <picture className="destination-img">
+        <motion.picture
+          className="destination-img"
+          animate={{ rotate: "360deg" }}
+          transition={{ repeat: "Infinity", duration: 150 }}
+        >
           <source media="(min-width:30rem)" srcSet={destinationData[0].images.png} />
           <img src={destinationData[0].images.webp} alt="" />
-        </picture>
+        </motion.picture>
 
         <div className="destination-text">
           <li className="destination-btn-container">
             {destinationData.map((destinationOption, index) => {
-              return <button key={index} className="destination-page-btn uppercase ff-barlow-cond pastel-blue">{destinationOption.name}</button>
+              return <button
+                key={index}
+                className="destination-page-btn uppercase ff-barlow-cond pastel-blue"
+                onClick={switchDestination}
+              >
+                {destinationOption.name}
+              </button>
             })
             }
           </li>

@@ -4,6 +4,7 @@
   background: url('../../public/images/destination/background-destination-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-y: hidden;
 
   @media(min-width: 29rem) {
     background: url('../../public/images/destination/background-destination-tablet.jpg');
