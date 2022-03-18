@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import json from '../assets/data.json';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
@@ -5,10 +6,12 @@ import { motion } from 'framer-motion';
 
 const Destination = () => {
 
+  const [planet, setPlanet] = useState('');
+
   const destinationData = json.destinations;
 
-  const switchDestination = () => {
-    console.log('clicked');
+  const switchDestination = (e) => {
+    setPlanet(e.target.innerText);
   }
 
   return (
@@ -28,18 +31,18 @@ const Destination = () => {
         </motion.picture>
 
         <div className="destination-text">
-          <li className="destination-btn-container">
+          <ul className="destination-btn-container">
             {destinationData.map((destinationOption, index) => {
-              return <button
+              return <li><button
                 key={index}
                 className="destination-page-btn uppercase ff-barlow-cond pastel-blue"
                 onClick={switchDestination}
               >
                 {destinationOption.name}
-              </button>
+              </button></li>
             })
             }
-          </li>
+          </ul>
 
           <div>
             <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{destinationData[0].name}</h2>
