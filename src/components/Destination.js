@@ -6,12 +6,10 @@ import { motion } from 'framer-motion';
 
 const Destination = () => {
 
-  const [planet, setPlanet] = useState('');
-
   const destinationData = json.destinations;
 
-  const switchDestination = (e) => {
-    setPlanet(e.target.innerText);
+  const switchDestination = () => {
+    console.log('worksss')
   }
 
   return (
