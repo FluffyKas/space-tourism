@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import json from '../assets/data.json';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
@@ -7,8 +8,10 @@ const Destination = () => {
 
   const destinationData = json.destinations;
 
-  const switchDestination = () => {
-    console.log('worksss')
+  const [activeTab, setActiveTab] = useState(0);
+
+  const changeContent = (index) => {
+    setActiveTab(index);
   }
 
   return (
@@ -23,8 +26,8 @@ const Destination = () => {
           animate={{ rotate: "360deg" }}
           transition={{ repeat: "Infinity", duration: 110 }}
         >
-          <source media="(min-width:30rem)" srcSet={destinationData[0].images.png} />
-          <img src={destinationData[0].images.webp} alt="" />
+          <source media="(min-width:30rem)" srcSet={destinationData[activeTab].images.png} />
+          <img src={destinationData[activeTab].images.webp} alt="" />
         </motion.picture>
 
         <div className="destination-text">
@@ -33,7 +36,7 @@ const Destination = () => {
               return <li><button
                 key={index}
                 className="destination-page-btn uppercase ff-barlow-cond pastel-blue"
-                onClick={switchDestination}
+                onClick={() => changeContent(index)}
               >
                 {destinationOption.name}
               </button></li>
@@ -42,17 +45,17 @@ const Destination = () => {
           </ul>
 
           <div>
-            <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{destinationData[0].name}</h2>
-            <p className="page-description">{destinationData[0].description}</p>
+            <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{destinationData[activeTab].name}</h2>
+            <p className="page-description">{destinationData[activeTab].description}</p>
 
             <div className="destination-details pb-200">
               <div className="detail">
                 <h3 className="detail-title ff-barlow-cond uppercase pastel-blue fw-300 pb-050">Avg. distance</h3>
-                <p className="detail-data ff-bellefair uppercase pb-150">{destinationData[0].distance}</p>
+                <p className="detail-data ff-bellefair uppercase pb-150">{destinationData[activeTab].distance}</p>
               </div>
               <div className="detail">
                 <h3 className="detail-title ff-barlow-cond uppercase pastel-blue fw-300 pb-050">Est. travel time</h3>
-                <p className="detail-data ff-bellefair uppercase">{destinationData[0].travel}</p>
+                <p className="detail-data ff-bellefair uppercase">{destinationData[activeTab].travel}</p>
               </div>
             </div>
           </div>
