@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  // grid-template-rows: 30% 40% 1fr;
 
   @media(min-width: 29rem) {
     background: url('../../public/images/destination/background-destination-tablet.jpg');

@@ -4,11 +4,6 @@
   background: url('../../public/images/technology/background-technology-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: $clr-white;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding-top: 3rem;
 
   @media(min-width: 29rem) {
     background: url('../../public/images/technology/background-technology-tablet.jpg');
@@ -59,27 +54,29 @@ picture {
 }
 
 .tech-page-btn {
-  all: unset;
   border: 1px solid $clr-white;
   border-radius: 50%;
+  background: 0;
   cursor: pointer;
-  width: 2.5rem;
+  width: clamp(2.5rem,4.5vw, 5rem);
   aspect-ratio: 1;
   text-align: center;
+  font-size: clamp(1.5rem,1.75vw,2rem)
 }
 
-.const-subtitle {
-  color: $clr-pastel-blue;
-  font-family: $ff-barlow-condensed;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  font-weight: 400;
+.tech-page-btn.tech-active {
+  background: white;
+  color: #0B0D17;
+}
+
+.const-tech-title {
+  font-size: clamp(0.875rem, 2vw, 1rem);
   letter-spacing: 3px;
 }
 
-.dynamic-subtitle {
+.tech-title {
   font-family: $ff-bellefair;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
   text-transform: uppercase;
   padding-block: 0.5rem 1rem;
 }

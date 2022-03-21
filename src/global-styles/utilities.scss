@@ -133,7 +133,7 @@
 .page-description {
   font-family: $ff-barlow;
   font-weight: 300;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 2vw, 1.125rem);
   max-width: 27.75rem;
   margin: 0 auto;
   line-height: 1.75;
@@ -142,5 +142,6 @@
   padding-inline: 2rem;
   @media(min-width:60rem) {
     padding-inline: 0;
+    margin: 0;
   }
 }

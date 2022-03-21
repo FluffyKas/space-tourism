@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import json from '../assets/data.json';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
