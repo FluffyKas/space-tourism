@@ -1,17 +1,13 @@
 import { useState } from 'react';
-import json from '../assets/data.json';
 import './Crew.scss';
 import '../global-styles/utilities.scss';
+import ButtonContainer from './ButtonContainer';
 
-const Crew = () => {
-
-  const crewData = json.crew;
+const Crew = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
-  const changeContent = (index) => {
-    setActiveTab(index);
-  }
+  // const content = <div className="btn-circle"></div>;
 
   return (
     <div className="crew-container container white">
@@ -21,25 +17,18 @@ const Crew = () => {
       <div className="inner-container">
 
         <picture className="crew-img">
-          <source media="(min-width:30rem)" srcSet={crewData[activeTab].images.png} />
-          <img src={crewData[activeTab].images.webp} alt="" className="crew-illustration" />
+          <source media="(min-width:30rem)" srcSet={data[activeTab].images.png} />
+          <img src={data[activeTab].images.webp} alt="" className="crew-illustration" />
         </picture>
 
         <div className="destination-text">
 
-          <li className="crew-btn-container">
-            {crewData.map((crewOption, index) => {
-              return <button key={index} className="crew-page-btn" onClick={() => changeContent(index)}>
-                <div className="btn-circle"></div>
-              </button>
-            })
-            }
-          </li>
+          <ButtonContainer name={'crew'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
           <div className="crew-text">
-            <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{crewData[activeTab].role}</h2>
-            <h3 className="name ff-bellefair uppercase fw-400 pb-100">{crewData[activeTab].name}</h3>
-            <p className="page-description">{crewData[activeTab].bio}</p>
+            <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{data[activeTab].role}</h2>
+            <h3 className="name ff-bellefair uppercase fw-400 pb-100">{data[activeTab].name}</h3>
+            <p className="page-description">{data[activeTab].bio}</p>
           </div>
 
         </div>

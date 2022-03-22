@@ -1,18 +1,12 @@
 import { useState } from 'react';
-import json from '../assets/data.json';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
 import { motion } from 'framer-motion';
+import ButtonContainer from './ButtonContainer';
 
-const Destination = () => {
-
-  const destinationData = json.destinations;
+const Destination = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
-
-  const changeContent = (index) => {
-    setActiveTab(index);
-  }
 
   return (
     <div className="destination-container container white">
@@ -26,36 +20,26 @@ const Destination = () => {
           animate={{ rotate: "360deg" }}
           transition={{ repeat: "Infinity", duration: 110 }}
         >
-          <source media="(min-width:30rem)" srcSet={destinationData[activeTab].images.png} />
-          <img src={destinationData[activeTab].images.webp} alt="" />
+          <source media="(min-width:30rem)" srcSet={data[activeTab].images.png} />
+          <img src={data[activeTab].images.webp} alt="" />
         </motion.picture>
 
         <div className="destination-text">
-          <ul className="destination-btn-container">
-            {destinationData.map((destinationOption, index) => {
-              return <li><button
-                key={index}
-                className="destination-page-btn uppercase ff-barlow-cond pastel-blue"
-                onClick={() => changeContent(index)}
-              >
-                {destinationOption.name}
-              </button></li>
-            })
-            }
-          </ul>
+
+          <ButtonContainer name={'destination'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
           <div>
-            <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{destinationData[activeTab].name}</h2>
-            <p className="page-description">{destinationData[activeTab].description}</p>
+            <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{data[activeTab].name}</h2>
+            <p className="page-description">{data[activeTab].description}</p>
 
             <div className="destination-details pb-200">
               <div className="detail">
                 <h3 className="detail-title ff-barlow-cond uppercase pastel-blue fw-300 pb-050">Avg. distance</h3>
-                <p className="detail-data ff-bellefair uppercase pb-150">{destinationData[activeTab].distance}</p>
+                <p className="detail-data ff-bellefair uppercase pb-150">{data[activeTab].distance}</p>
               </div>
               <div className="detail">
                 <h3 className="detail-title ff-barlow-cond uppercase pastel-blue fw-300 pb-050">Est. travel time</h3>
-                <p className="detail-data ff-bellefair uppercase">{destinationData[activeTab].travel}</p>
+                <p className="detail-data ff-bellefair uppercase">{data[activeTab].travel}</p>
               </div>
             </div>
           </div>
