@@ -1,4 +1,5 @@
 import '../global-styles/utilities.scss';
+import './ButtonContainer.scss';
 const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
 
   const changeContent = (index) => {
