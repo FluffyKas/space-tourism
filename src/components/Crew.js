@@ -7,8 +7,6 @@ const Crew = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
-  // const content = <div className="btn-circle"></div>;
-
   return (
     <div className="crew-container container white">
 
@@ -18,7 +16,7 @@ const Crew = ({ data }) => {
 
         <picture className="crew-img">
           <source media="(min-width:30rem)" srcSet={data[activeTab].images.png} />
-          <img src={data[activeTab].images.webp} alt="" className="crew-illustration" />
+          <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
         </picture>
 
         <div className="destination-text">

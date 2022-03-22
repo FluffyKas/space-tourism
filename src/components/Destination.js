@@ -21,7 +21,7 @@ const Destination = ({ data }) => {
           transition={{ repeat: "Infinity", duration: 110 }}
         >
           <source media="(min-width:30rem)" srcSet={data[activeTab].images.png} />
-          <img src={data[activeTab].images.webp} alt="" />
+          <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
         </motion.picture>
 
         <div className="destination-text">

@@ -10,14 +10,13 @@ const Technology = ({ data }) => {
   return (
     <div className="technology-container container white">
 
-
       <h1 className="page-title"><span className="page-title-number">03</span> Space launch 101</h1>
 
       <div className="inner-container">
 
-        <picture>
+        <picture className="tech-img">
           <source media="(min-width:30rem)" srcSet={data[activeTab].images.portrait} />
-          <img src={data[activeTab].images.landscape} alt="" className="technology-illustration" />
+          <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
         </picture>
 
         <div className="tech-text">
