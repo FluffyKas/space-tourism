@@ -43,7 +43,7 @@ picture {
 }
 }
 
-.btn-container {
+.technology-btn-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -53,7 +53,7 @@ picture {
   }
 }
 
-.tech-page-btn {
+.technology-page-btn {
   border: 1px solid $clr-white;
   border-radius: 50%;
   background: 0;
@@ -64,7 +64,7 @@ picture {
   font-size: clamp(1.5rem,1.75vw,2rem)
 }
 
-.tech-page-btn.tech-active {
+.technology-page-btn.technology-active {
   background: white;
   color: #0B0D17;
 }
