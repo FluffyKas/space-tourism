@@ -21,11 +21,48 @@ header {
   }
 }
 
+.nav-skip {
+  text-decoration: none;
+  color: #0B0D17;
+  background: $clr-white;
+  border-radius: 0 0 5px 5px;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  transform: translateY(-120%);
+  transition: transform .4s ease-in;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.nav-skip:focus {
+  transform: translateY(0);
+  outline: none;  
+}
+
 .logo {
   width: clamp(2.25rem, 4vw, 3rem);
   @media(min-width: 60rem) {
     padding-top: 1rem;
   }
+}
+
+.logo:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 2px dashed $clr-white;
+}
+
+.logo:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.logo:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 2px dashed $clr-white;
 }
 
 // NAV MENU
@@ -84,6 +121,23 @@ header {
   position: relative;
 }
 
+.menu-item:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 2px dashed $clr-white;
+}
+
+.menu-item:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.menu-item:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 2px dashed $clr-white;
+}
+
 .menu-item::before {
   content: '';
   position: absolute;
@@ -123,3 +177,4 @@ header {
     display: none;
   }
 }
+
