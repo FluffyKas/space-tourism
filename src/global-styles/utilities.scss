@@ -100,11 +100,26 @@
 .container {
   min-height: 100vh;
   display: grid;
+  grid-template-rows: 10% 90%;
   justify-content: center;
   padding-top: clamp(5.5rem, 23vw, 13rem);
   text-align: center;
   @media(min-width: 30rem) {
     text-align: left;
+  }
+}
+
+.inner-container {
+  text-align: center;
+
+  @media(min-width:60rem) {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12rem;
+    align-items: center;
+    padding-inline: 2rem;
   }
 }
 
