@@ -18,19 +18,6 @@
   }
 }
 
-.inner-container {
-
-  @media(min-width:60rem) {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12rem;
-    align-items: center;
-    padding-inline: 2rem;
-  }
-}
-
 .destination-text {
   @media(min-width: 60rem) {
     order: 1;

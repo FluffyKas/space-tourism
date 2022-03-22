@@ -18,15 +18,6 @@
   }
 }
 
-.inner-container {
-  text-align: center;
-
-  @media(min-width:60rem) {
-    display: flex;
-    text-align: left;
-  }
-}
-
 .tech-text {
   @media(min-width:60rem) {
     order: 1;
@@ -37,7 +28,7 @@
 
 }
 
-picture { 
+.tech-img { 
   @media(min-width:60rem) {
   order: 2;
 }
