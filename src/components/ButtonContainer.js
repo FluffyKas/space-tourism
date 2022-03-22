@@ -13,8 +13,8 @@ const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
             return <button key={index} className={`${name}-page-btn uppercase ff-barlow-cond pastel-blue ${index === activeTab ? `${name}-active` : ""}`} onClick={() => changeContent(index)}>
               {element.name}</button>
           case 'crew':
-            return <button key={index} className={`${name}-page-btn ${index === activeTab ? `${name}-active` : ""}`} onClick={() => changeContent(index)}>
-              <div className="btn-circle"></div></button>
+            return <button key={index} className={`${name}-page-btn ${index === activeTab ? `${name}-active` : ""}`} onClick={() => changeContent(index)} aria-label="Show crew member">
+              <div className="btn-circle" aria-hidden="true"></div></button>
           case 'technology':
             return <button key={index} className={`${name}-page-btn ff-bellefair white fw-400 ${index === activeTab ? `${name}-active` : ""}`} onClick={() => changeContent(index)}>
               {index}</button>
