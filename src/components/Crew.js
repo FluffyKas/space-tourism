@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './Crew.scss';
 import '../global-styles/utilities.scss';
 import ButtonContainer from './ButtonContainer';
+import { motion } from 'framer-motion';
+import { textContainerVariants } from '../assets/shared/animations';
 
 const Crew = ({ data }) => {
 
@@ -19,7 +21,11 @@ const Crew = ({ data }) => {
           <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
         </picture>
 
-        <div className="destination-text">
+        <motion.div className="destination-text"
+          variants={textContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
 
           <ButtonContainer name={'crew'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -29,9 +35,9 @@ const Crew = ({ data }) => {
             <p className="page-description">{data[activeTab].bio}</p>
           </div>
 
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </div >
   );
 }
 

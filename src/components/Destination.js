@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Destination.scss';
 import '../global-styles/utilities.scss'
 import { motion } from 'framer-motion';
+import { textContainerVariants } from '../assets/shared/animations';
 import ButtonContainer from './ButtonContainer';
 
 const Destination = ({ data }) => {
@@ -24,7 +25,11 @@ const Destination = ({ data }) => {
           <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
         </motion.picture>
 
-        <div className="destination-text">
+        <motion.div className="destination-text"
+          variants={textContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
 
           <ButtonContainer name={'destination'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -44,7 +49,7 @@ const Destination = ({ data }) => {
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </div>
   );

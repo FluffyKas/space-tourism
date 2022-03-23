@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './Technology.scss';
 import '../global-styles/utilities.scss';
 import ButtonContainer from './ButtonContainer';
+import { motion } from 'framer-motion';
+import { textContainerVariants } from '../assets/shared/animations';
 
 const Technology = ({ data }) => {
 
@@ -19,7 +21,11 @@ const Technology = ({ data }) => {
           <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
         </picture>
 
-        <div className="tech-text">
+        <motion.div className="tech-text"
+          variants={textContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
 
           <ButtonContainer name={'technology'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
@@ -29,7 +35,7 @@ const Technology = ({ data }) => {
             <p className="page-description">{data[activeTab].description}</p>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
 
