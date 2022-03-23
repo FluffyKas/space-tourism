@@ -18,6 +18,12 @@
   }
 }
 
+.tech-container-inner {
+  @media(min-width:84rem) {
+    width: 1350px;
+  }
+}
+
 .tech-text {
   @media(min-width:60rem) {
     order: 1;
@@ -25,7 +31,6 @@
     align-items: center;
     gap: 2rem;
   }
-
 }
 
 .tech-img { 
