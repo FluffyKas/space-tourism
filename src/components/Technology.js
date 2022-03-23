@@ -3,7 +3,7 @@ import './Technology.scss';
 import '../global-styles/utilities.scss';
 import ButtonContainer from './ButtonContainer';
 import { motion } from 'framer-motion';
-import { textContainerVariants } from '../assets/shared/animations';
+import { textContainerVariants, imgVariants } from '../assets/shared/animations';
 
 const Technology = ({ data }) => {
 
@@ -14,32 +14,28 @@ const Technology = ({ data }) => {
 
       <h1 className="page-title"><span className="page-title-number">03</span> Space launch 101</h1>
 
-      <div className="inner-container">
+      <div className="inner-container tech-container-inner">
 
-        <picture className="tech-img">
+        <motion.picture className="tech-img" variants={imgVariants} initial="hidden" animate="visible" key={activeTab}>
           <source media="(min-width:30rem)" srcSet={data[activeTab].images.portrait} />
           <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
-        </picture>
+        </motion.picture>
 
-        <motion.div className="tech-text"
-          variants={textContainerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <div className="tech-text">
 
           <ButtonContainer name={'technology'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
-          <div>
+          <motion.div variants={textContainerVariants} initial="hidden" animate="visible" key={activeTab} className="tech-text-right">
             <h2 className="const-tech-title fw-400 ff-barlow-cond pastel-blue uppercase">The terminology...</h2>
             <h3 className="tech-title fw-400">{data[activeTab].name}</h3>
             <p className="page-description">{data[activeTab].description}</p>
-          </div>
+          </motion.div>
 
-        </motion.div>
+        </div>
 
       </div>
 
-    </div>
+    </div >
   );
 }
 

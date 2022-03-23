@@ -8,6 +8,7 @@ import ButtonContainer from './ButtonContainer';
 const Destination = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
+  const [animateOnChange, setAnimateOnChange] = useState('');
 
   return (
     <div className="destination-container container white">
@@ -33,7 +34,7 @@ const Destination = ({ data }) => {
 
           <ButtonContainer name={'destination'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
-          <div>
+          <motion.div variants={textContainerVariants} key={activeTab}>
             <h2 className="destination-name ff-bellefair uppercase pt-100 fw-400">{data[activeTab].name}</h2>
             <p className="page-description">{data[activeTab].description}</p>
 
@@ -47,7 +48,7 @@ const Destination = ({ data }) => {
                 <p className="detail-data ff-bellefair uppercase">{data[activeTab].travel}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </motion.div>
       </div>
