@@ -8,7 +8,6 @@ import ButtonContainer from './ButtonContainer';
 const Destination = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
-  const [animateOnChange, setAnimateOnChange] = useState('');
 
   return (
     <div className="destination-container container white">
