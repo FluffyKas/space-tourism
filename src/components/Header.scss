@@ -24,7 +24,9 @@ header {
 .nav-skip {
   text-decoration: none;
   color: #0B0D17;
+  cursor: pointer;
   background: $clr-white;
+  border: 0;
   border-radius: 0 0 5px 5px;
   padding: .5rem 1.5rem;
   position: absolute;
@@ -64,6 +66,24 @@ header {
   /* for browsers that do support :focus-visible */
   outline: 2px dashed $clr-white;
 }
+
+.hamburger-btn:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 2px dashed $clr-white;
+}
+
+.hamburger-btn:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.hamburger-btn:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 2px dashed $clr-white;
+}
+
 
 // NAV MENU
 
