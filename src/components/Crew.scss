@@ -85,6 +85,6 @@
   .btn-circle {
     background: $clr-white;
     width: clamp(10px, 1vw, 15px);
-    aspect-ratio: 1;
+    height: clamp(10px, 1vw, 15px);
     border-radius: 50%;
   }

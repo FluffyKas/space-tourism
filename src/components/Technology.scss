@@ -50,7 +50,7 @@
   background: 0;
   cursor: pointer;
   width: clamp(2.5rem,4.5vw, 5rem);
-  aspect-ratio: 1;
+  height: clamp(2.5rem,4.5vw, 5rem);
   text-align: center;
   font-size: clamp(1.5rem,1.75vw,2rem)
 }
