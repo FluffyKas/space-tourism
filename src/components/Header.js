@@ -7,12 +7,6 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
 
-  // const [activeHeader, setActiveHeader] = useState('');
-
-  // const toggleActiveState = (e) => {
-  //   setActiveHeader(e.target.textContent)
-  // }
-
   const [isOpened, setIsOpened] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
