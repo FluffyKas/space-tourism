@@ -3,8 +3,6 @@
 // GENERAL STYLES
 
 header {
-  color: white;
-  font-family: $ff-barlow-condensed;
   position: absolute;
   width: 100%;
 }
@@ -67,6 +65,17 @@ header {
   outline: 2px dashed $clr-white;
 }
 
+.hamburger-btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+  top: 2rem;
+  right: 2rem;
+  @media(min-width: 40rem) {
+    display: none;
+  }
+}
+
 .hamburger-btn:focus {
   /* Provide a fallback style for browsers
      that don't support :focus-visible */
@@ -84,18 +93,22 @@ header {
   outline: 2px dashed $clr-white;
 }
 
-
 // NAV MENU
 
 .nav-menu {
-  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 10rem 2rem;
+  background: hsla(230, 35%, 7%, 0.975);
+  
   @media(min-width: 40rem) {
-    background: hsla(0, 0%, 59%, 0.1);
-    backdrop-filter: blur( 9px );
-    -webkit-backdrop-filter: blur( 9px );
-    display: flex;
+    background: hsla(230, 35%, 7%, 0.5);
+    flex-direction: row;
     justify-content: center;
-    text-transform: uppercase;
     gap: 2rem;
     padding: 2rem 5rem;
     position: absolute;
@@ -105,12 +118,7 @@ header {
   }
 
   @media(min-width: 60rem) {
-    background: hsla(0, 0%, 59%, 0.1);
-    backdrop-filter: blur( 9px );
-    -webkit-backdrop-filter: blur( 9px );
-    display: flex;
     justify-content: center;
-    text-transform: uppercase;
     gap: 6rem;
     padding: 2rem 5rem;
     position: absolute;
@@ -133,11 +141,18 @@ header {
   }
 }
 
+@supports (backdrop-filter: blur( 9px )) {
+  .nav-menu {
+    background: hsla(0, 0%, 59%, 0.1);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+  }
+}
+
 .menu-item {
   color: $clr-white;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 300;
   position: relative;
 }
 
@@ -159,6 +174,7 @@ header {
 }
 
 .menu-item::before {
+  @media(min-width: 30rem) {
   content: '';
   position: absolute;
   left: 50%;
@@ -168,6 +184,7 @@ header {
   width: 0;
   height: 3px;
   transition: all .3s ease-in;
+  }
 }
 
 .menu-item:hover {
@@ -179,11 +196,13 @@ header {
 }
 
 .menu-item-number {
-  display: none;
-  @media(min-width: 80rem) {
+  font-weight: 700;
+  padding-right: 1rem;
+  @media (min-width:40rem) {
+    display: none;
+  }
+  @media(min-width: 86rem) {
     display: inline-block;
-    font-weight: 500;
-    padding-right: 1rem;
   }
 }
 
