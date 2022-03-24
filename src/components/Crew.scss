@@ -18,6 +18,11 @@
   }
 }
 
+.crew-container-inner {
+  // border: 2px solid red;
+  max-width: 1100px;
+}
+
 .destination-text {
   @media(min-width: 60rem) {
     order: 1;
@@ -33,6 +38,12 @@
   @media(min-width: 60rem) {
     order: 2;
     padding-inline: 0;
+  }
+}
+
+.crew-img img {
+  @media(min-width: 40rem) {
+      max-width: 26rem;
   }
 }
 
