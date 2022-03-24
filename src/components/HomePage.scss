@@ -8,8 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding-top: 8rem;
-  padding-inline: 1.75rem;
+  padding: 8rem 1.75rem 3rem 1.75rem;
 
   @media(min-width: 29rem) {
     background: url(../assets/home/background-home-tablet.jpg);
@@ -31,9 +30,13 @@
   @media(min-width:60rem) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 1300px;
     margin: 0 auto;
+    gap: 6rem;
+  }
+  @media(min-width:100rem) {
+    max-width: 1800px;
   }
 }
 
