@@ -1,5 +1,7 @@
 @use './variables.scss' as *;
 
+// UTILITY AND SHARED CLASSES
+
 //Colours
 
 .white {
@@ -97,6 +99,16 @@
   text-transform: uppercase;
 }
 
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .container {
   min-height: 100vh;
   display: grid;
@@ -111,7 +123,7 @@
 
 .inner-container {
   text-align: center;
-
+  
   @media(min-width:60rem) {
     display: flex;
     text-align: left;
