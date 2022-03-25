@@ -1,23 +1,18 @@
 @use '../../global-styles/variables.scss' as *;
 
 .technology-container {
-  background: none;
-  transition: all 1s ease;
-}
-
-.technology-container {
-  background: url('../../../public/images/technology/background-technology-mobile.jpg');
+  background: url('../../../public/images/technology/background-technology-mobile.jpg'), $clr-dark-blue;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media(min-width: 29rem) {
-    background: url('../../../public/images/technology/background-technology-tablet.jpg');
+    background: url('../../../public/images/technology/background-technology-tablet.jpg'), $clr-dark-blue;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../../../public/images/technology/background-technology-desktop.jpg');
+    background: url('../../../public/images/technology/background-technology-desktop.jpg'), $clr-dark-blue;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -33,7 +28,7 @@
   @media(min-width:60rem) {
     order: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
   }
 }
@@ -67,7 +62,7 @@
 
 .technology-page-btn.technology-active {
   background: white;
-  color: #0B0D17;
+  color: $clr-dark-blue;
 }
 
 .const-tech-title {

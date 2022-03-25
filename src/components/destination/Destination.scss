@@ -1,24 +1,19 @@
 @use '../../global-styles/variables.scss' as *;
 
 .destination-container {
-  background: none;
-  transition: all 1s ease;
-}
-
-.destination-container {
-  background: url('../../../public/images/destination/background-destination-mobile.jpg');
+  background: url('../../../public/images/destination/background-destination-mobile.jpg'), $clr-dark-blue;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 
   @media(min-width: 29rem) {
-    background: url('../../../public/images/destination/background-destination-tablet.jpg');
+    background: url('../../../public/images/destination/background-destination-tablet.jpg'), $clr-dark-blue;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../../../public/images/destination/background-destination-desktop.jpg');
+    background: url('../../../public/images/destination/background-destination-desktop.jpg'), $clr-dark-blue;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -33,11 +28,14 @@
   }
 }
 
-// .destination-text {
-//   @media(min-width: 60rem) {
-//     order: 2;
-//   }
-// }
+.destination-text {
+  @media(min-width: 60rem) {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
 
 .destination-btn-container {
   display: flex;

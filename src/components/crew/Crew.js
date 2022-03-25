@@ -20,7 +20,7 @@ const Crew = ({ data }) => {
           <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
         </motion.picture>
 
-        <motion.div className="destination-text"
+        <motion.div className="crew-text"
           variants={textContainerVariants}
           initial="hidden"
           animate="visible"
