@@ -24,4 +24,18 @@ const imgVariants = {
   }
 }
 
-export { textContainerVariants, imgVariants };
+
+const dummyVariant = {
+  hidden: {
+    opacity: 1
+  },
+  visible: {
+    opacity: 1
+  },
+  exit: {
+    opacity: 0
+  }
+}
+
+
+export { textContainerVariants, imgVariants, dummyVariant };
