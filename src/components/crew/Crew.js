@@ -39,21 +39,11 @@ const Crew = ({ data }) => {
 
           <ButtonContainer name={'crew'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
-          <AnimatePresence exitBeforeEnter>
-            <motion.div className="crew-text"
-              key={activeTab}
-              variants={placeHolderVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <motion.div variants={textContainerVariants} key={activeTab}>
-                <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{data[activeTab].role}</h2>
-                <h3 className="name ff-bellefair uppercase fw-400 pb-100">{data[activeTab].name}</h3>
-                <p className="page-description">{data[activeTab].bio}</p>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+          <motion.div className="crew-text" variants={textContainerVariants} key={activeTab}>
+            <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{data[activeTab].role}</h2>
+            <h3 className="name ff-bellefair uppercase fw-400 pb-100">{data[activeTab].name}</h3>
+            <p className="page-description">{data[activeTab].bio}</p>
+          </motion.div>
 
         </motion.div>
       </div>
