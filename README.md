@@ -58,6 +58,8 @@ To still improve things a bit, I refactored my old code, created a new component
 
 ### Continued development
 
+The skip-nav link needs a fix ^^
+
 I'll also play around more with Framer Motion! It can get pretty complex and there's definitely more to do with it than what I've attempted so far.
 
 ### Useful resources
