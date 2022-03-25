@@ -58,7 +58,9 @@ To still improve things a bit, I refactored my old code, created a new component
 
 ### Continued development
 
-The skip-nav link needs a fix ^^
+1. The skip-nav link needs a fix ^^
+2. I'm going to fix the mobile-menu so it also disappears when clicked outside of it (not just on tapping the close btn)
+3. Would be nice to implement a 'swipe' to switch between tabs. I'm not sure how to do that at the moment, but would improve the user experience for sure, especially in the Crew section.
 
 I'll also play around more with Framer Motion! It can get pretty complex and there's definitely more to do with it than what I've attempted so far.
 
