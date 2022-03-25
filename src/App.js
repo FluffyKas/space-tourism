@@ -1,9 +1,10 @@
+import './global-styles/utilities.scss'
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
-import Destination from './components/Destination';
-import Crew from './components/Crew';
-import Technology from './components/Technology';
+import Header from './components//header/Header';
+import HomePage from './components/homepage/HomePage';
+import Destination from './components//destination/Destination';
+import Crew from './components/crew/Crew';
+import Technology from './components/technology/Technology';
 import json from './assets/data.json';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/destination" element={<Destination data={json.destinations} />} />
