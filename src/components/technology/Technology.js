@@ -2,7 +2,7 @@ import './Technology.scss';
 import { useState } from 'react';
 import ButtonContainer from '../buttoncontainer/ButtonContainer';
 import { AnimatePresence, motion } from 'framer-motion';
-import { textContainerVariants, imgVariants, dummyVariant } from '../../assets/shared/animations';
+import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
 
 const Technology = ({ data }) => {
 
@@ -18,7 +18,7 @@ const Technology = ({ data }) => {
         <AnimatePresence exitBeforeEnter>
           <motion.div className="tech-img"
             key={activeTab}
-            variants={dummyVariant}
+            variants={placeHolderVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
