@@ -2,7 +2,7 @@ import './Crew.scss';
 import { useState } from 'react';
 import ButtonContainer from '../buttoncontainer/ButtonContainer';
 import { AnimatePresence, motion } from 'framer-motion';
-import { textContainerVariants, imgVariants, dummyVariant } from '../../assets/shared/animations';
+import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
 
 const Crew = ({ data }) => {
 
@@ -19,7 +19,7 @@ const Crew = ({ data }) => {
         <AnimatePresence exitBeforeEnter>
           <motion.div className="crew-img"
             key={activeTab}
-            variants={dummyVariant}
+            variants={placeHolderVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -40,14 +40,14 @@ const Crew = ({ data }) => {
           <ButtonContainer name={'crew'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
           <AnimatePresence exitBeforeEnter>
-            <motion.div
+            <motion.div className="crew-text"
               key={activeTab}
-              variants={dummyVariant}
+              variants={placeHolderVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
             >
-              <motion.div className="crew-text" variants={textContainerVariants} key={activeTab}>
+              <motion.div variants={textContainerVariants} key={activeTab}>
                 <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{data[activeTab].role}</h2>
                 <h3 className="name ff-bellefair uppercase fw-400 pb-100">{data[activeTab].name}</h3>
                 <p className="page-description">{data[activeTab].bio}</p>
