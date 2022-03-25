@@ -33,7 +33,7 @@ const dummyVariant = {
     opacity: 1
   },
   exit: {
-    opacity: 0
+    opacity: 1
   }
 }
 
