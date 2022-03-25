@@ -1,4 +1,3 @@
-import '../global-styles/utilities.scss';
 import './ButtonContainer.scss';
 const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
 
@@ -25,16 +24,6 @@ const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
       })
       }
     </nav>
-
-    //  Navigation with forEach which has a boo-boo I can't see >.< 
-    // <nav className={`${name}-btn-container`}>
-    //   {
-    //     Object.keys(data).forEach((element, index) => {
-    //     console.log(data, index, element)
-    //     return <p>Stuff</p>
-    //     })
-    //   }
-    // </nav> 
 
   );
 }

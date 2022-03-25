@@ -1,25 +1,29 @@
-@use '../global-styles/variables.scss' as *;
+@use '../../global-styles/variables.scss' as *;
 
 .crew-container {
-  background: url('../../public/images/crew/background-crew-mobile.jpg');
+  background: none;
+  transition: all 1s ease;
+}
+
+.crew-container {
+  background: url('../../../public/images/crew/background-crew-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @media(min-width: 29rem) {
-    background: url('../../public/images/crew/background-crew-tablet.jpg');
+    background: url('../../../public/images/crew/background-crew-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../../public/images/crew/background-crew-desktop.jpg');
+    background: url('../../../public/images/crew/background-crew-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
 
 .crew-container-inner {
-  // border: 2px solid red;
   max-width: 1100px;
 }
 

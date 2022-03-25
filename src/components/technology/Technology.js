@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import './Technology.scss';
-import '../global-styles/utilities.scss';
-import ButtonContainer from './ButtonContainer';
+import { useState } from 'react';
+import ButtonContainer from '../buttoncontainer/ButtonContainer';
 import { motion } from 'framer-motion';
-import { textContainerVariants, imgVariants } from '../assets/shared/animations';
+import { textContainerVariants, imgVariants } from '../../assets/shared/animations';
 
 const Technology = ({ data }) => {
 

@@ -1,18 +1,23 @@
-@use '../global-styles/variables.scss' as *;
+@use '../../global-styles/variables.scss' as *;
 
 .technology-container {
-  background: url('../../public/images/technology/background-technology-mobile.jpg');
+  background: none;
+  transition: all 1s ease;
+}
+
+.technology-container {
+  background: url('../../../public/images/technology/background-technology-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   @media(min-width: 29rem) {
-    background: url('../../public/images/technology/background-technology-tablet.jpg');
+    background: url('../../../public/images/technology/background-technology-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../../public/images/technology/background-technology-desktop.jpg');
+    background: url('../../../public/images/technology/background-technology-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }

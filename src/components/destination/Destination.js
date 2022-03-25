@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import './Destination.scss';
-import '../global-styles/utilities.scss'
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { textContainerVariants } from '../assets/shared/animations';
-import ButtonContainer from './ButtonContainer';
+import { textContainerVariants } from '../../assets/shared/animations';
+import ButtonContainer from '../buttoncontainer/ButtonContainer';
 
 const Destination = ({ data }) => {
 

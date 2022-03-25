@@ -1,5 +1,4 @@
 import './HomePage.scss';
-import '../global-styles/utilities.scss';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {

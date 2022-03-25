@@ -1,17 +1,17 @@
-@use '../global-styles/variables.scss' as *;
+@use '../../global-styles/variables.scss' as *;
 
 // GENERAL STYLES
 
 .home-outer-wrapper {
   min-height: 100vh;
-  background: url(../assets/home/background-home-mobile.jpg);
+  background: url('../../assets/home/background-home-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   padding: 8rem 1.75rem 3rem 1.75rem;
 
   @media(min-width: 29rem) {
-    background: url(../assets/home/background-home-tablet.jpg);
+    background: url('../../assets/home/background-home-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 12rem;
@@ -19,7 +19,7 @@
   }
 
   @media(min-width: 60rem) {
-    background: url(../assets/home/background-home-desktop.jpg);
+    background: url('../../assets/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20rem;
@@ -36,7 +36,8 @@
     gap: 6rem;
   }
   @media(min-width:100rem) {
-    max-width: 1800px;
+    max-width: 1400px;
+    justify-content: space-between;
   }
 }
 

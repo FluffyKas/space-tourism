@@ -1,19 +1,24 @@
-@use '../global-styles/variables.scss' as *;
+@use '../../global-styles/variables.scss' as *;
 
 .destination-container {
-  background: url('../../public/images/destination/background-destination-mobile.jpg');
+  background: none;
+  transition: all 1s ease;
+}
+
+.destination-container {
+  background: url('../../../public/images/destination/background-destination-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 
   @media(min-width: 29rem) {
-    background: url('../../public/images/destination/background-destination-tablet.jpg');
+    background: url('../../../public/images/destination/background-destination-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media(min-width: 60rem) {
-    background: url('../../public/images/destination/background-destination-desktop.jpg');
+    background: url('../../../public/images/destination/background-destination-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }

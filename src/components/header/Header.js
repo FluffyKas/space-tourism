@@ -1,7 +1,7 @@
-import logo from '../assets/shared/logo.svg';
-import hamburger from '../assets/shared/icon-hamburger.svg';
-import closeBtn from '../assets/shared/icon-close.svg';
 import './Header.scss';
+import logo from '../../assets/shared/logo.svg';
+import hamburger from '../../assets/shared/icon-hamburger.svg';
+import closeBtn from '../../assets/shared/icon-close.svg';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
