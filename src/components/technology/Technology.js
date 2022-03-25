@@ -1,8 +1,8 @@
 import './Technology.scss';
 import { useState } from 'react';
 import ButtonContainer from '../buttoncontainer/ButtonContainer';
-import { motion } from 'framer-motion';
-import { textContainerVariants, imgVariants } from '../../assets/shared/animations';
+import { AnimatePresence, motion } from 'framer-motion';
+import { textContainerVariants, imgVariants, dummyVariant } from '../../assets/shared/animations';
 
 const Technology = ({ data }) => {
 
@@ -15,10 +15,20 @@ const Technology = ({ data }) => {
 
       <div className="inner-container tech-container-inner">
 
-        <motion.picture className="tech-img" variants={imgVariants} initial="hidden" animate="visible" key={activeTab}>
-          <source media="(min-width:30rem)" srcSet={data[activeTab].images.portrait} />
-          <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
-        </motion.picture>
+        <AnimatePresence exitBeforeEnter>
+          <motion.div className="tech-img"
+            key={activeTab}
+            variants={dummyVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <motion.picture variants={imgVariants} initial="hidden" animate="visible" key={activeTab}>
+              <source media="(min-width:30rem)" srcSet={data[activeTab].images.portrait} />
+              <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
+            </motion.picture>
+          </motion.div>
+        </AnimatePresence>
 
         <div className="tech-text">
 
