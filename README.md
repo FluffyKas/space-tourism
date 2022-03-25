@@ -30,7 +30,7 @@ Users should be able to:
 
 ![](./screenshots/space-tourism-mobile.png)
 ![](./screenshots/space-tourism-tablet.png)
-![](./screenshots/space-tourism-mobile.png)
+![](./screenshots/space-tourism-desktop.png)
 
 ### Links
 
