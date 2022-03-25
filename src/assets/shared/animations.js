@@ -25,7 +25,7 @@ const imgVariants = {
 }
 
 
-const dummyVariant = {
+const placeHolderVariants = {
   hidden: {
     opacity: 1
   },
@@ -38,4 +38,4 @@ const dummyVariant = {
 }
 
 
-export { textContainerVariants, imgVariants, dummyVariant };
+export { textContainerVariants, imgVariants, placeHolderVariants };
