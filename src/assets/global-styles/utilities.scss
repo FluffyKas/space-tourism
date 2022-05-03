@@ -1,0 +1,169 @@
+@use './variables.scss' as *;
+
+// UTILITY AND SHARED CLASSES
+
+//Colours
+
+.white {
+  color: $clr-white;
+}
+
+.pastel-blue {
+  color: $clr-pastel-blue;
+}
+
+//Font-families
+
+.ff-barlow {
+  font-family: $ff-barlow;
+}
+
+.ff-barlow-cond {
+  font-family: $ff-barlow-condensed;
+  letter-spacing: 1.5px;
+}
+
+.ff-bellefair {
+  font-family: $ff-bellefair;
+}
+
+//Font-weights
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+
+//Paddings
+
+.pt-050 {
+  padding-top: .5rem;
+}
+
+.pt-100 {
+  padding-top: 1rem;
+}
+
+.pt-150 {
+  padding-top: 1.5rem;
+}
+
+.pt-200 {
+  padding-top: 2rem;
+}
+
+.pb-050 {
+  padding-bottom: .5rem;
+}
+
+.pb-100 {
+  padding-bottom: 1rem;
+}
+
+.pb-150 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-200 {
+  padding-bottom: 2rem;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  justify-content: center;
+  padding-top: clamp(5.5rem, 23vw, 13rem);
+  padding-bottom: 1.5rem;
+  text-align: center;
+  @media(min-width: 30rem) {
+    text-align: left;
+  }
+}
+
+.inner-container {
+  text-align: center;
+  
+  @media(min-width:60rem) {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12rem;
+    align-items: center;
+    padding-inline: 2rem;
+  }
+}
+
+.page-title {
+  font-family: $ff-barlow-condensed;
+  font-size: clamp(1rem,3vw,1.75rem);
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  @media(min-width: 30rem) {
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+    }
+  @media(min-width: 60rem) {
+    padding-bottom: 0;
+  }
+}
+
+.page-title-number {
+  font-weight: 500;
+  opacity: .25;
+  padding-right: .75rem;
+}
+
+.page-description {
+  font-family: $ff-barlow;
+  font-weight: 300;
+  font-size: clamp(0.9375rem, 2vw, 1.125rem);
+  max-width: 27.75rem;
+  margin: 0 auto;
+  line-height: 1.75;
+  color: $clr-pastel-blue;
+  padding-bottom: 1rem;
+  padding-inline: 2rem;
+  @media(min-width:60rem) {
+    padding-inline: 0;
+    margin: 0;
+  }
+}
