@@ -1,7 +1,8 @@
 import './HomePage.scss';
 import { motion } from 'framer-motion';
 
-const HomePage = () => {
+export const HomePage = () => {
+
   return (
     <div className="home-outer-wrapper">
       <div className="home">
@@ -23,5 +24,3 @@ const HomePage = () => {
     </div>
   );
 }
-
-export default HomePage;

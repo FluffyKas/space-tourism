@@ -1,10 +1,10 @@
 import './Technology.scss';
 import { useState } from 'react';
-import ButtonContainer from '../buttoncontainer/ButtonContainer';
+import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
 import { AnimatePresence, motion } from 'framer-motion';
 import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
 
-const Technology = ({ data }) => {
+export const Technology = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -47,5 +47,3 @@ const Technology = ({ data }) => {
     </div >
   );
 }
-
-export default Technology;

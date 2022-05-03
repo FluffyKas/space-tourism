@@ -1,10 +1,10 @@
 import './Crew.scss';
 import { useState } from 'react';
-import ButtonContainer from '../buttoncontainer/ButtonContainer';
+import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
 import { AnimatePresence, motion } from 'framer-motion';
 import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
 
-const Crew = ({ data }) => {
+export const Crew = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -39,16 +39,14 @@ const Crew = ({ data }) => {
 
           <ButtonContainer name={'crew'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
 
-          <motion.div className="crew-text" variants={textContainerVariants} key={activeTab}>
+          <div className="crew-text">
             <h2 className="job-title ff-bellefair uppercase fw-400 pb-050">{data[activeTab].role}</h2>
             <h3 className="name ff-bellefair uppercase fw-400 pb-100">{data[activeTab].name}</h3>
             <p className="page-description">{data[activeTab].bio}</p>
-          </motion.div>
+          </div>
 
         </motion.div>
       </div>
     </div >
   );
 }
-
-export default Crew;

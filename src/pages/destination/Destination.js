@@ -2,9 +2,9 @@ import './Destination.scss';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { textContainerVariants } from '../../assets/shared/animations';
-import ButtonContainer from '../buttoncontainer/ButtonContainer';
+import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
 
-const Destination = ({ data }) => {
+export const Destination = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -53,5 +53,3 @@ const Destination = ({ data }) => {
     </div>
   );
 }
-
-export default Destination;
