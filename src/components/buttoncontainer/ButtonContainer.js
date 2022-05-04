@@ -1,5 +1,6 @@
 import './ButtonContainer.scss';
-const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
+
+export const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
 
   const changeContent = (index) => {
     setActiveTab(index);
@@ -27,5 +28,3 @@ const ButtonContainer = ({ data, name, activeTab, setActiveTab }) => {
 
   );
 }
-
-export default ButtonContainer;
