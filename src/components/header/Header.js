@@ -5,7 +5,7 @@ import closeBtn from '../../assets/shared/icon-close.svg';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-const Header = () => {
+export const Header = () => {
 
   const [isOpened, setIsOpened] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -58,5 +58,3 @@ const Header = () => {
     </header >
   );
 }
-
-export default Header;
