@@ -1,6 +1,6 @@
 import './assets/global-styles/utilities.scss';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components//header/Header';
+import { Header } from './components';
 import { HomePage } from './pages';
 import { Destination } from './pages';
 import { Crew } from './pages';
