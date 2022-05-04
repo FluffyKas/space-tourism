@@ -1,15 +1,20 @@
 import './Destination.scss';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { textContainerVariants } from '../../assets/shared/animations';
-import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
+import { pageAnimation, textContainerVariants } from '../../assets/animations/animations';
+import { ButtonContainer } from '../../components';
 
 export const Destination = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="destination-container container white">
+    <motion.div
+      className="destination-container container white"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+    >
 
       <h1 className="page-title"><span className="page-title-number">01</span> Pick your destination</h1>
 
@@ -50,6 +55,6 @@ export const Destination = ({ data }) => {
 
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

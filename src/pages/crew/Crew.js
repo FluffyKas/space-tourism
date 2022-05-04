@@ -1,15 +1,20 @@
 import './Crew.scss';
 import { useState } from 'react';
-import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
+import { ButtonContainer } from '../../components';
 import { AnimatePresence, motion } from 'framer-motion';
-import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
+import { pageAnimation, textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/animations/animations';
 
 export const Crew = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="crew-container container white">
+    <motion.div
+      className="crew-container container white"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+    >
 
       <h1 className="page-title"><span className="page-title-number">02</span> Meet your crew</h1>
 
@@ -47,6 +52,6 @@ export const Crew = ({ data }) => {
 
         </motion.div>
       </div>
-    </div >
+    </motion.div >
   );
 }

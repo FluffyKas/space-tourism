@@ -1,10 +1,16 @@
 import './HomePage.scss';
 import { motion } from 'framer-motion';
+import { pageAnimation } from '../../assets/animations/animations';
 
 export const HomePage = () => {
 
   return (
-    <div className="home-outer-wrapper">
+    <motion.div
+      className="home-outer-wrapper"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="home">
 
         <div className="home-text-wrapper">
@@ -21,6 +27,7 @@ export const HomePage = () => {
         </motion.button>
 
       </div>
-    </div>
+
+    </motion.div>
   );
 }

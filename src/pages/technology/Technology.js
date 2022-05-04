@@ -1,15 +1,20 @@
 import './Technology.scss';
 import { useState } from 'react';
-import ButtonContainer from '../../components/buttoncontainer/ButtonContainer';
+import { ButtonContainer } from '../../components';
 import { AnimatePresence, motion } from 'framer-motion';
-import { textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/shared/animations';
+import { pageAnimation, textContainerVariants, imgVariants, placeHolderVariants } from '../../assets/animations/animations';
 
 export const Technology = ({ data }) => {
 
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="technology-container container white">
+    <motion.div
+      className="technology-container container white"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="visible"
+    >
 
       <h1 className="page-title"><span className="page-title-number">03</span> Space launch 101</h1>
 
@@ -44,6 +49,6 @@ export const Technology = ({ data }) => {
 
       </div>
 
-    </div >
+    </motion.div >
   );
 }
