@@ -6,8 +6,8 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Screenshots](#screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -26,15 +26,15 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
+### Links
+
+- Live site: [Space tourism](https://space-tourism-kas.netlify.app/)
+
 ### Screenshots
 
 ![](./screenshots/space-tourism-mobile.png)
 ![](./screenshots/space-tourism-tablet.png)
 ![](./screenshots/space-tourism-desktop.png)
-
-### Links
-
-[Live site](https://space-tourism-kas.netlify.app/)
 
 ## My process
 
@@ -50,7 +50,7 @@ Users should be able to:
 
 ### What I learned
 
-My first React project is done! I'm already pretty comfy with CSS and this challenge is kinda of CSS-heavy so I thought this would be a good starting point for working with React. I had to learn most of it on the go, as I was building out the app but I had a lot of fun. I also started experimenting with Framer Motion which is an amazing tool if somewhat intimidating at first >.<
+My first React project is done! I'm already pretty comfy with CSS and this challenge is kinda of CSS-heavy so I thought this would be a good starting point for working with React. I had to learn most of it on the go, as I was building out the app but I had a lot of fun. I also started experimenting with Framer Motion which is an amazing tool if somewhat intimidating at first.
 
 I tried to keep it scalable and not to be too repetitive with my code. At some point, I even rewrote the whole thing to just use one component for all the Destination, Crew and Technology pages as they actually have a lot of similarities. This approach got rid of many of the repetitive bits but the end product was really hard to read so I scrapped it. I decided it's not worth sacrificing the readability. Some repetition will be there and that's perhaps not always a bad thing.
 
@@ -58,11 +58,7 @@ To still improve things a bit, I refactored my old code, created a new component
 
 ### Continued development
 
-1. The skip-nav link needs a fix ^^
-2. I'm going to fix the mobile-menu so it also disappears when clicked outside of it (not just on tapping the close btn)
-3. Would be nice to implement a 'swipe' to switch between tabs. I'm not sure how to do that at the moment, but would improve the user experience for sure, especially in the Crew section.
-
-I'll also play around more with Framer Motion! It can get pretty complex and there's definitely more to do with it than what I've attempted so far.
+Working with images and animating the different tabs was the hardest part of this and on first load, things still look a bit "jumpy" when content switches. I did my best to mitigate this with some animations and giving everything a "placeholder". It's a lot better than how it was but it's not perfect and I'm going to come back to this as I learn more.
 
 ### Useful resources
 
@@ -72,3 +68,4 @@ I'll also play around more with Framer Motion! It can get pretty complex and the
 ## Author
 
 - Frontend Mentor - [@FluffyKas](https://www.frontendmentor.io/profile/FluffyKas)
+- Twitter - [@fluffykas](https://twitter.com/fluffykas)
