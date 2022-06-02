@@ -21,10 +21,10 @@ export const Crew = ({ data }) => {
       <div className="inner-container crew-container-inner">
 
 
-        <motion.div className="crew-img"
-        >
+        <div className="crew-img-container">
           <AnimatePresence exitBeforeEnter>
             <motion.picture
+              className="crew-img"
               key={activeTab}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
@@ -34,7 +34,7 @@ export const Crew = ({ data }) => {
               <img src={data[activeTab].images.webp} alt={data[activeTab].name} />
             </motion.picture>
           </AnimatePresence>
-        </motion.div>
+        </div>
 
         <AnimatePresence exitBeforeEnter>
           <motion.div className="crew-text"

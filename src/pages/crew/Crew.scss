@@ -32,7 +32,7 @@
   }
 }
 
-.crew-img {
+.crew-img-container {
   padding-inline: 6.5rem;
   margin: 0 auto;
   position: relative;
@@ -43,7 +43,11 @@
   }
 }
 
-.crew-img::after {
+.crew-img {
+  max-width: 30rem;
+}
+
+.crew-img-container::after {
   content: '';
   position: absolute;
   border-top: 1px solid $clr-white;
