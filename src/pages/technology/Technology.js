@@ -20,26 +20,38 @@ export const Technology = ({ data }) => {
 
       <div className="inner-container tech-container-inner">
 
-        <AnimatePresence exitBeforeEnter>
-          <motion.div className="tech-img"
-            key={activeTab}
-            variants={placeHolderVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <motion.picture variants={imgVariants} initial="hidden" animate="visible" key={activeTab}>
+
+        <div className="tech-img-container">
+          <AnimatePresence exitBeforeEnter>
+            <motion.picture
+              className="tech-img"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: .75 } }}
+              exit={{ opacity: 0 }}
+              key={activeTab}>
               <source media="(min-width:30rem)" srcSet={data[activeTab].images.portrait} />
               <img src={data[activeTab].images.landscape} alt={data[activeTab].name} />
             </motion.picture>
-          </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
+        </div>
+
 
         <div className="tech-text">
 
-          <ButtonContainer name={'technology'} data={data} activeTab={activeTab} setActiveTab={setActiveTab} />
+          <ButtonContainer
+            name={'technology'}
+            data={data}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
 
-          <motion.div variants={textContainerVariants} initial="hidden" animate="visible" key={activeTab} className="tech-text-right">
+          <motion.div
+            variants={textContainerVariants}
+            initial="hidden"
+            animate="visible"
+            key={activeTab}
+            className="tech-text-right"
+          >
             <h2 className="const-tech-title fw-400 ff-barlow-cond pastel-blue uppercase">The terminology...</h2>
             <h3 className="tech-title fw-400">{data[activeTab].name}</h3>
             <p className="page-description">{data[activeTab].description}</p>
@@ -47,7 +59,7 @@ export const Technology = ({ data }) => {
 
         </div>
 
-      </div>
+      </div >
 
     </motion.div >
   );

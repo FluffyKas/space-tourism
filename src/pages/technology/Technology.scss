@@ -30,10 +30,17 @@
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+    min-height: 30rem;
   }
 }
 
-.tech-img { 
+.tech-text-right {
+  @media(min-width:60rem) {
+    min-height: 30rem;
+  }
+}
+
+.tech-img-container { 
   @media(min-width:60rem) {
   order: 2;
 }
